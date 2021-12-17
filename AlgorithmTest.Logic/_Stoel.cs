@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmTest.DAL
+namespace AlgorithmTest.TestDAL
 {
-    class Stoel
+    class _Stoel
     {
         public int id { get; set; }
 

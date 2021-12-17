@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AlgorithmTest.DAL
+namespace AlgorithmTest.TestDAL
 {
     public class Bezoeker
     {

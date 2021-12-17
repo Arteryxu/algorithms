@@ -1,11 +1,11 @@
-﻿using AlgorithmTest.DAL;
+﻿using AlgorithmTest.TestDAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AlgorithmTest.DAL
+namespace AlgorithmTest.TestDAL
 {
     class Groep
     {
