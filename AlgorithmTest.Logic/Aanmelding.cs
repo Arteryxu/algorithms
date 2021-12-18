@@ -10,7 +10,7 @@ namespace AlgorithmTest.Logic
         {
             Random rnd = new Random();
 
-
+            //Lijst van alle bezoekers
             List<_Bezoeker> ledenList = new List<_Bezoeker>();
             ledenList.Add(new _Bezoeker(1, false));
             ledenList.Add(new _Bezoeker(2, false));
@@ -26,10 +26,16 @@ namespace AlgorithmTest.Logic
             int huidigeBezoekers = 0;
 
             List<_GroepLid> groepen = new List<_GroepLid>();
-            for (int i = 1; i <= maxBezoekers; i++ )
+            for (int i = 1; i <= maxBezoekers;)
             {
-                huidigeBezoekers = groepen.Count();
-                if(groepGrootte<=groepen.Count())
+                //Controle of niet de hele lijst al door is
+                huidigeBezoekers = i;
+                if(huidigeBezoekers < maxBezoekers && huidigeBezoekers == ledenList.Count)
+                {
+                    break;
+                }
+
+                if(groepGrootte==groepen.Count())
                 {
                     groepId++;
                     aantalKinderen = 0;
@@ -45,11 +51,12 @@ namespace AlgorithmTest.Logic
                 {
                     aantalKinderen++;
                 }
-                
+
                 if (!ledenList[newBezoeker].isKind || aantalVolwassenen > 0)
                 {
                     groepen.Add(new _GroepLid(groepId, ledenList[newBezoeker], aantalKinderen));
                     ledenList.RemoveAt(newBezoeker);
+                    i++;
                 }
             }
         }
